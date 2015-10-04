@@ -21,7 +21,7 @@ namespace PrimeTime.Tests.Unit
         [Test]
         public void when_5_primes_are_requested_return_2_3_5_7_11()
         {
-            Assert.Fail();
+            PrimeList.With(5).Should().BeEquivalentTo(new[] { 2, 3, 5, 7, 11 });
         }
     }
 }
