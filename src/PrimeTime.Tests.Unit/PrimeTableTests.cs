@@ -21,7 +21,13 @@ namespace PrimeTime.Tests.Unit
         [Test]
         public void when_requested_size_is_3_then_return_a_3x3_table_with_the_products_calculated()
         {
-            Assert.Fail();
+            var expectedTable = new[,]
+            {
+                {1 , 2, 3},
+                {2 , 4, 6},
+                {3 , 6, 9}
+            };
+            PrimeTable.WithSizeOf(3).ToGridArray().Should().BeEquivalentTo(expectedTable);
         }
 
         [Test]
