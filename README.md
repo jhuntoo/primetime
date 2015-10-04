@@ -1,6 +1,7 @@
 ## Prime Numbers Table Exercise
 
 ### Usage
+From the Command Prompt
 ```
 git clone https://github.com/jhuntoo/primetime
 cd primetime
