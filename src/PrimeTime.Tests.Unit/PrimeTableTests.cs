@@ -15,7 +15,7 @@ namespace PrimeTime.Tests.Unit
         [Test]
         public void when_requested_size_is_1_then_return_a_single_cell_table_with_the_value_1()
         {
-            Assert.Fail();
+            PrimeTable.WithSizeOf(1).ToGridArray().Should().BeEquivalentTo(new[,] {{1}});
         }
 
         [Test]
