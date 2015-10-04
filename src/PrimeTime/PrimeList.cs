@@ -11,14 +11,13 @@ namespace PrimeTime
         {
             if (numberOfElements == 0) return EmptyList;
 
-            var primes = new List<int>();
-            primes.Add(2);
-            int nextPrime = 3;
+            var primes = new List<int> {2};
+            var nextPrime = 3;
             while (primes.Count < numberOfElements)
             {
-                int sqrt = (int)Math.Sqrt(nextPrime);
-                bool isPrime = true;
-                for (int i = 0; (int)primes[i] <= sqrt; i++)
+                var sqrt = (int)Math.Sqrt(nextPrime);
+                var isPrime = true;
+                for (var i = 0; (int)primes[i] <= sqrt; i++)
                 {
                     if (nextPrime % primes[i] == 0)
                     {
@@ -36,19 +35,5 @@ namespace PrimeTime
 
         }
 
-        static bool IsPrimeNumber(int num)
-        {
-            bool bPrime = true;
-            int factor = num / 2;
-
-            int i = 0;
-
-            for (i = 2; i <= factor; i++)
-            {
-                if ((num % i) == 0)
-                    bPrime = false;
-            }
-            return bPrime;
-        }
     }
 }
