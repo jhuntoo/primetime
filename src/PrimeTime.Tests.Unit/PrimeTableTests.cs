@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using FluentAssertions;
+using NUnit.Framework;
 
 namespace PrimeTime.Tests.Unit
 {
@@ -8,7 +9,7 @@ namespace PrimeTime.Tests.Unit
         [Test]
         public void when_requested_size_is_zero_then_return_an_empty_table()
         {
-            Assert.Fail();
+            PrimeTable.WithSizeOf(0).ToGridArray().Should().BeEmpty();
         }
 
         [Test]

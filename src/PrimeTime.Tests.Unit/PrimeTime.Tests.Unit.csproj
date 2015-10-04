@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="IntExtensions.cs" />
     <Compile Include="PrimeNumberTests.cs" />
+    <Compile Include="PrimeTableTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
