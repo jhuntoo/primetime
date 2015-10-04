@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using FluentAssertions;
+using NUnit.Framework;
 
 namespace PrimeTime.Tests.Unit
 {
@@ -8,7 +9,7 @@ namespace PrimeTime.Tests.Unit
         [Test]
         public void when_zero_primes_are_requested_return_empty_list()
         {
-            Assert.Fail();
+            PrimeList.With(0).Should().BeEmpty();
         }
 
         [Test]
