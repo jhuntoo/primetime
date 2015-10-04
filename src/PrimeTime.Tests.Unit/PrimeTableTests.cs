@@ -33,7 +33,16 @@ namespace PrimeTime.Tests.Unit
         [Test]
         public void when_requested_size_is_5_then_return_a_5x5_table_with_the_products_calculated()
         {
-            Assert.Fail();
+            var expectedTable = new[,]
+            {
+                {1 , 2, 3, 5, 7},
+                {2 , 4, 6, 10, 14},
+                {3 , 6, 9, 15, 21},
+                {5 , 10, 15, 25, 35},
+                {7 , 14, 21, 35, 49}
+
+            };
+            PrimeTable.WithSizeOf(5).ToGridArray().Should().BeEquivalentTo(expectedTable);
         }
     }
 }
