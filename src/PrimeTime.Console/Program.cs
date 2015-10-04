@@ -10,6 +10,11 @@ namespace PrimeTime.Console
     {
         static void Main(string[] args)
         {
+            if (args.Length != 1) return;
+            var size = int.Parse(args.First());
+            var primeTable = PrimeTable.WithSizeOf(size);
+            primeTable.PrintToConsole();
+
         }
     }
 }

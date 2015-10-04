@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{35701553-DFBF-494F-8193-4A4DFFD6E413}</ProjectGuid>
+    <ProjectGuid>{AEC861EE-3484-4960-B8C9-C1E712F72A83}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PrimeTime.Console</RootNamespace>
@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrimeTime\PrimeTime.csproj">
+      <Project>{37F9627C-517E-4BD3-ADE7-8A82E62A3FC7}</Project>
+      <Name>PrimeTime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

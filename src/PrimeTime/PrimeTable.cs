@@ -1,4 +1,6 @@
-﻿namespace PrimeTime
+﻿using System;
+
+namespace PrimeTime
 {
     public class PrimeTable
     {
@@ -26,6 +28,19 @@
             gridArray.SetAxisValues(primes);
             gridArray.CalculateAndSetProducts();
             return gridArray;
+        }
+
+        public void PrintToConsole()
+        {
+            var gridArray = ToGridArray();
+            for (int rowIndex = 0; rowIndex < gridArray.GetLength(0); rowIndex++)
+            {
+                for (int columnIndex = 0; columnIndex < gridArray.GetLength(1); columnIndex++)
+                {
+                    Console.Write(gridArray[rowIndex, columnIndex] + "\t");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
